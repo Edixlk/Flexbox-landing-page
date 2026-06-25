@@ -1,0 +1,114 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* custom font*/
+     font-family: "Montserrat", sans-serif;
+
+    /* this remove underlines, borders from links, and buttons that are set by default */
+    list-style: none;
+    text-decoration: none;
+    border: none;
+}
+
+* {
+    border: 1px solid rgba(255, 0, 0, 0.482);
+}
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 10px;
+    background-color: rgb(3, 112, 255);
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* navigation links (right side)*/
+
+.navbar-links {
+    display: flex;
+    gap: 25px;
+    font-size: 18px;
+}
+
+.navbar-links a {
+    flex-grow: 1;
+    font-weight: 500;
+    padding-bottom: 2px;
+    color: white;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-links a:hover {
+    border-bottom: 2px solid rgb(0, 166, 255);
+}
+
+.hero {
+    display: none;
+}
+/* setup section  */
+
+.setup {
+    padding: 0 10px;
+}
+
+ .title_small {
+    text-align: center;
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:30px 15px;
+}
+
+/* card layout*/
+
+.card {
+    max-width: 300px;
+}
+
+/*  this is to avoid the image from overflowing */
+.card img {
+     max-width: 100%; 
+     aspect-ratio: 1/1;
+    object-fit: scale-down;
+}
+
+#mechan-keyboard {
+    object-fit: cover;  /* this last image needed to be scaled up since it was too small. 
+                        comapared to the rest*/
+}
+
+
+.card-info {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    text-align: center;
+}  
+
+
+
+
+/* CTA (call to action) section */
+
