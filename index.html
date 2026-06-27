@@ -1,78 +1,147 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- css stylesheet -->
     <link rel="stylesheet" href="main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flexbox landing Page</title>
+    <title>Document</title>
   </head>
   <body>
-    <!-- navbar with header logo -->
-    <div class="navbar">
-      <!-- header logo -->
-      <div class="navbar-logo">Jsh.dev</div>
+    <div class="wrapper">
+      <div class="navbar">
+        <div class="nav-logo">jsh.dev</div>
 
-      <!-- navbar links -->
-      <ul class="navbar-links">
-        <a href="#">About</a>
-        <a href="#">My Setup</a>
-        <a href="#">Contact</a>
-      </ul>
-    </div>
+        <ul class="navlinks">
+          <li><a href="#hero">home</a></li>
+          <li><a href="#setup">Setup</a></li>
+          <li><a href="#quotes">Quotes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
 
-    <!-- tech stack section -->
-    <div class="hero section">
-      <h1 class="title">hello there</h1>
-      <p>to my website. There isn't much stuff on here as yet.</p>
-    </div>
+      <!-- hero section  -->
 
-    <!-- Setup section -->
-    <div class="setup section">
-      <h2 class="title_small">My Current Setup.</h2>
+      <div class="hero-section" id="hero">
+        <div class="wrapper-left">
+          <h1 class="hero-text">
+            Hello and <br />
+            <span>welcome</span>
+          </h1>
 
-      <div class="card-container">
-        <div class="card">
-          <img src="./images/Lenovo-ThinkPad-T480s.webp" alt="thinkpad-t480s" />
-          <div class="card-info">Lenovo Thinkpad T480s</div>
+          <p class="hero-subtext">
+            to my website. There isn't much content here as yet since this is
+            sort of a demo.
+          </p>
+
+          <button class="cta-btn">Get in touch?</button>
         </div>
 
-        <div class="card">
-          <img src="./images/portable-monitor.jpg" alt="portable monitor" />
-          <div class="card-info">WGK 15.6" IPS portable monitor</div>
-        </div>
+        <img src="./images/hero-image.jpg" alt="hero-image" id="hero-img" />
+      </div>
 
-        <div class="card">
-          <img src="./images/logi-mouse.jpg" alt="logitech-mouse" />
-          <div class="card-info">logitech M170 wireless mouse</div>
-        </div>
+      <!-- Setup section -->
 
-        <div class="card">
-          <img
-            id="mechan-keyboard"
-            src="./images/mech-keyboard.avif"
-            alt="keyboard"
-          />
-          <div class="card-info">Atrix GSKB05 60% RGB mechanical keyboard</div>
+      <div class="setup-section" id="setup">
+        <h2 class="setup-text">My current desk setup</h2>
+        <hr />
+
+        <!-- setup cards  -->
+        <div class="setup-wrapper">
+          <div class="card">
+            <img
+              src="./images/Lenovo-ThinkPad-T480s.webp"
+              alt="lenovo-laptop"
+              class="card-image"
+            />
+            <div class="card-info">Lenovo Thinkpad t480s</div>
+          </div>
+
+          <div class="card">
+            <img
+              src="./images/laptop-stand.jpg"
+              alt="laptop-stand"
+              class="card-image"
+            />
+            <div class="card-info">360deg laptop stand</div>
+          </div>
+
+          <div class="card">
+            <img
+              id="keyboard-img"
+              src="./images/mech-keyboard.avif"
+              alt="mechanical-keyboard"
+              class="card-image"
+            />
+            <div class="card-info">
+              Artix 60% RGB mechanical keyboard (Gamestop Exclusive)
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="./images/logi-mouse.jpg"
+              alt="Logitech-mouse"
+              class="card-image"
+            />
+            <div class="card-info">Logitech M170 wireless mouse</div>
+          </div>
+
+          <div class="card">
+            <img
+              src="./images/portable-monitor.jpg"
+              alt="portable-monitor"
+              class="card-image"
+            />
+            <div class="card-info">WGK 15.6" IPS portable monitor</div>
+          </div>
+
+          <div class="card">
+            <img
+              src="./images/jlab-earbuds.jpg"
+              alt="jlab-earbuds"
+              class="card-image"
+            />
+            <div class="card-info">JLab Go Sport+ earbuds</div>
+          </div>
         </div>
+      </div>
+
+      <!-- Quotes section -->
+
+      <div class="quotes-section" id="quotes">
+        <p class="quotes-text">
+          <q
+            >Quality over quantity. My goal is to build sleek, professional
+            looking websites at a affordable price for my clients.</q
+          >
+        </p>
+        <h3 class="author-text">
+          <em>- jshua.dev, soon to be web developer</em>
+        </h3>
       </div>
     </div>
 
-    <!-- CTA section (call to action) -->
-    <div class="call-to-act section">
-      <div class="cta-content">
-        <h2 class="title_small">Get in touch?</h2>
+    <!-- Call-to-action section -->
 
-        <p class="cta-para-txt">
-          Feel free to do so if you any more questions or want a project done. I
-          am available 3 days a week, even on weekends.
+    <div class="cta-section">
+      <div class="cta-left-side">
+        <h2 class="cta-text">Feel free to send a message!</h2>
+        <p class="cta-subtext">
+          Reach out for any projects, collabs etc. Will try to
+          respond as soon as possible.
         </p>
       </div>
 
-      <button id="cta-button">Send a Message</button>
+      <div class="cta-right-side">
+        <button class="cta-submit-btn">Send an email</button>
+      </div>
     </div>
 
-    <!-- footer -->
-    <div class="footer">Copyright &copy jsh.dev 2026</div>
+    <!-- footer (basic) -->
+
+      <div class="footer">
+        Copyright &copy jsh.dev, Odin Project 2026
+      </div>
+    </div>
   </body>
 </html>

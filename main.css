@@ -1,114 +1,266 @@
 /* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/* for "welcome" font in the hero section. */
+@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* custom font*/
-     font-family: "Montserrat", sans-serif;
-
-    /* this remove underlines, borders from links, and buttons that are set by default */
-    list-style: none;
-    text-decoration: none;
-    border: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 * {
-    border: 1px solid rgba(255, 0, 0, 0.482);
+  font-family: "DM Sans", sans-serif; /* this is where the font is applied */
+  list-style: none;
+  text-decoration: none;
+  /* border: 1px solid red;  */
 }
 
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+}
 
-
+.wrapper > * {
+  flex: 1 100%;
+}
 
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 15px 10px;
-    background-color: rgb(3, 112, 255);
+  flex: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(0, 64, 201);
 }
 
-.navbar-logo {
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
+.nav-logo {
+  color: white;
+  font-size: 24px;
 }
 
+/* nav links */
 
-/* navigation links (right side)*/
-
-.navbar-links {
-    display: flex;
-    gap: 25px;
-    font-size: 18px;
+.navlinks {
+  display: flex;
+  gap: 30px;
 }
 
-.navbar-links a {
-    flex-grow: 1;
-    font-weight: 500;
-    padding-bottom: 2px;
-    color: white;
-    border-bottom: 2px solid transparent;
+.navlinks a {
+  color: white;
+  font-size: 18px;
 }
 
-.navbar-links a:hover {
-    border-bottom: 2px solid rgb(0, 166, 255);
+/* hero section (first section the page)*/
+
+.wrapper-left {
+  flex-basis: 470px;
 }
 
-.hero {
-    display: none;
-}
-/* setup section  */
-
-.setup {
-    padding: 0 10px;
-}
-
- .title_small {
-    text-align: center;
-    font-weight: 300;
-    font-size: 40px;
-    margin-bottom: 15px;
+.hero-section {
+  background-color: rgb(0, 64, 201);
+  padding: 150px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 43px;
+  align-items: center;
+  border-radius: 0px 0px 20px 20px;
 }
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:30px 15px;
+/* font sizes and styling for the header and subtext. */
+
+.hero-text {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 25px;
+  line-height: 0.8;
+  font-weight: 200;
 }
 
-/* card layout*/
+.hero-text span {
+  text-transform: capitalize;
+  font-size: 100px;
+  font-weight: 900;
+}
+
+.hero-subtext {
+  font-size: 18px;
+  color: rgb(192, 224, 255);
+}
+
+/*  this is for the hero image on the right side of the page */
+
+#hero-img {
+  max-width: 40%;
+  border-radius: 10px;
+}
+
+/* call to action button */
+.cta-btn {
+  cursor: pointer;
+  padding: 12px 34px;
+  font-size: 18px;
+  margin-top: 13px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: rgba(3, 0, 86, 0.582);
+}
+
+.cta-btn:hover {
+  background-color: rgba(11, 11, 67, 0.683);
+}
+
+/* Setup section */
+
+.setup-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.setup-section hr {
+  width: 50%;
+  margin: auto; /*/ this is to center the hr tag */
+  border: 1px solid rgba(11, 11, 67, 0.253);
+}
+
+/* wrapper section for cards */
+
+.setup-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* information header text */
+.setup-text {
+  font-size: 46px;
+  font-weight: 900;
+}
+
+/* card layout */
 
 .card {
-    max-width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  max-width: 300px;
+  flex-grow: 1;
+  border: 2px solid transparent;
+  transition: 0.3s ease-in-out;
 }
 
-/*  this is to avoid the image from overflowing */
-.card img {
-     max-width: 100%; 
-     aspect-ratio: 1/1;
-    object-fit: scale-down;
+.card:hover {
+  transform: scale(1.04);
+  border: 1px solid rgb(11, 11, 67);
+  color: rgb(0, 64, 201);
 }
 
-#mechan-keyboard {
-    object-fit: cover;  /* this last image needed to be scaled up since it was too small. 
-                        comapared to the rest*/
+.card-image {
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 
+/* the keyboard image was to small */
 
+#keyboard-img {
+  object-fit: cover; /* this scales up the images to match the rest*/
+}
+
+/* card-info */
 .card-info {
-    font-size: 14px;
-    font-weight: 500;
-    margin-top: 10px;
-    text-align: center;
-}  
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px;
+}
 
+/*  quotes section */
 
+.quotes-section {
+  padding: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  background-color: rgb(0, 64, 201);
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+}
 
+.quotes-text {
+  /* max-width: 60%; */
+  text-align: left;
+  font-size: 40px;
+  font-weight: 600;
+}
 
-/* CTA (call to action) section */
+.author-text {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(177, 184, 255);
+}
 
+/* Call-to-action section */
+
+.cta-section {
+  background-color: rgb(11, 11, 67);
+  color: white;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 45px;
+}
+
+.cta-left-side {
+  flex-basis: 45%;
+}
+
+.cta-text {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.cta-subtext {
+  color: rgba(255, 255, 255, 0.719);
+}
+
+/* message button on right side */
+
+.cta-submit-btn {
+  border: none;
+  cursor: not-allowed;
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-size: 20px;
+  background-color: rgb(1, 81, 254);
+  color: white;
+}
+
+.cta-submit-btn:hover {
+  background-color: rgb(0, 64, 201);
+}
+
+/* footer basic, nothing much */
+
+.footer {
+  border-top: 1px solid rgba(220, 220, 248, 0.148);
+  background-color: rgb(11, 11, 67);
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(227, 227, 227, 0.55);
+}
